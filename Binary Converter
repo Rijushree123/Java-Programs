@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Binaryconvertor
+{
+    int number;
+    long binNumber;
+    Binaryconvertor(int n)
+    {
+        number=n;
+        binNumber=convert(n);
+    }
+    long convert(int n)
+    {
+        if(n==0)
+            return 0;
+        System.out.println((n/2)*10+"+"+n%2);
+        return convert(n/2)*10+n%2;
+    }
+    void display()
+    {
+        System.out.println("Number :"+number);
+        System.out.println("Binary Equivalent :"+binNumber);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("\nEnter the number to convert: ");
+        int n=sc.nextInt();
+        
+        Binaryconvertor ob=new  Binaryconvertor(n);
+        ob.display();
+    }
+}
+
+    
