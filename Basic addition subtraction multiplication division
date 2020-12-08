@@ -18,3 +18,5 @@ public class riju1
         System.out.println("Divition of "+a+" and "+b+"="+div);
     }
 }
+
+#by Rijushree
