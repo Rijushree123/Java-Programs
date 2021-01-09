@@ -1,0 +1,70 @@
+import java.util.*;
+
+public class frequency
+{
+    static void freq_word(String s)
+    {
+        Map<String,Integer> mp=new TreeMap<>();
+        
+        //splitting to find the word
+        String arr[]=s.split(" ");
+        for(int i=0;i<arr.length;i++)
+        {
+            //Condition to check if the array element is present in the hashmap
+            if(mp.containsKey(arr[i]))
+            {
+                mp.put(arr[i],mp.get(arr[i])+1);
+            }
+            else
+            {
+                mp.put(arr[i],1);
+            }
+        }
+        System.out.println("Frequency of each word: ");
+        //Loop to iterate over the elements of the hashmap
+        for(Map.Entry<String,Integer> entry: mp.entrySet())
+        {
+            System.out.println(entry.getKey()+"-"+entry.getValue());
+        }
+    }
+    static void freq_letter(String s)
+    {
+        Map<Character, Integer> mp=new TreeMap<>();
+        //removing white space
+        s = s.toString().replaceAll(" ", "");
+        //splitting to find the word
+        char arr[]=s.toCharArray();
+        for (char c : arr) { 
+            if (mp.containsKey(c)) { 
+  
+                // If char is present in charCountMap, 
+                // incrementing it's count by 1 
+                mp.put(c, mp.get(c) + 1); 
+            } 
+            else 
+            { 
+  
+                // If char is not present in charCountMap, 
+                // putting this char to charCountMap with 1 as it's value 
+                mp.put(c, 1); 
+            } 
+        } 
+        System.out.println("Frequency of each word: ");
+        //Loop to iterate over the elements of the hashmap
+        for (Map.Entry entry : mp.entrySet())
+        { 
+            System.out.println(entry.getKey() + " " + entry.getValue()); 
+        }
+    }
+    public static void main(String[] args) 
+    {
+        String s;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the string: ");
+        s=sc.nextLine();
+        System.out.println(" ");
+        freq_word(s);
+        freq_letter(s);
+    }
+}
+        
