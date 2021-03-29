@@ -14,3 +14,4 @@ public class riju1
         System.out.println("Factorial of "+n+"="+f);
    }
 }
+#Rijushree
