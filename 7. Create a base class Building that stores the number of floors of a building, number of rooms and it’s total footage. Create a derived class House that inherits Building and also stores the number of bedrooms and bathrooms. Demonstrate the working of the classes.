@@ -1,0 +1,42 @@
+class Building
+{
+	void floors()
+	{
+		System.out.println("No of floors = 5");
+	}
+	void rooms()
+	{
+		System.out.println("No of rooms = 6");
+	}
+	void footage()
+	{
+		System.out.println("Total footage = 120");
+	}
+}
+class House extends Building
+{
+	void bedrooms()
+	{
+		System.out.println("no of bedrooms = 2");
+	}
+	void bathrooms()
+	{
+		System.out.println("no of bathrooms = 1");
+	}
+	void points()
+	{
+		super.floors();
+		super.rooms();
+		super.footage();
+		bedrooms();
+		bathrooms();
+	}
+}
+class BuildingWork
+{
+	public static void main(String args[])
+	{
+		House d=new House();
+		d.points();
+	}
+}
