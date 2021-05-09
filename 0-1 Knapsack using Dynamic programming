@@ -48,4 +48,4 @@ public class knapsack
         System.out.println(Arrays.deepToString(mat)+"\n"); // Visualization of the table
     }
 }
-#Rijushree Guha
+#Rijushree Guha Software Engineer
