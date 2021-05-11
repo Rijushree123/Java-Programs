@@ -44,7 +44,8 @@ public class knapsack
                 mat[item][capacity] = Math.max(maxValWithoutCurr, maxValWithCurr); // Pick the larger of the two
             }
         }
-        System.out.println(mat[n][w]); // Final answer
+        //printing the final answer
+        System.out.println(mat[n][w]);
         System.out.println(Arrays.deepToString(mat)+"\n"); // Visualization of the table
     }
 }
